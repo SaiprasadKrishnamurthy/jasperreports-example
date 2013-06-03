@@ -7,7 +7,7 @@
 
 	<servlet>
 		<servlet-name>ReportServlet</servlet-name>
-		<servlet-class>be.nbb.jasper.servlet.ReportServlet</servlet-class>
+		<servlet-class>be.example.jasper.servlet.ReportServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

@@ -1,4 +1,4 @@
-package be.nbb.jasper.domain;
+package be.example.jasper.domain;
 
 public class Address {
 

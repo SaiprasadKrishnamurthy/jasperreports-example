@@ -1,4 +1,4 @@
-package be.nbb.jasper;
+package be.example.jasper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -21,8 +21,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.w3c.dom.Document;
 
-import be.nbb.jasper.domain.Address;
-import be.nbb.jasper.domain.Person;
+import be.example.jasper.domain.Address;
+import be.example.jasper.domain.Person;
 
 public class ReportGeneratorTest {
 

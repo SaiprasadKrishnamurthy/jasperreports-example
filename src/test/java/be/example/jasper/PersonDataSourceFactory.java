@@ -1,10 +1,10 @@
-package be.nbb.jasper;
+package be.example.jasper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import be.nbb.jasper.domain.Address;
-import be.nbb.jasper.domain.Person;
+import be.example.jasper.domain.Address;
+import be.example.jasper.domain.Person;
 
 public class PersonDataSourceFactory {
 

@@ -1,4 +1,4 @@
-package be.nbb.jasper.domain;
+package be.example.jasper.domain;
 
 import java.util.ArrayList;
 import java.util.List;

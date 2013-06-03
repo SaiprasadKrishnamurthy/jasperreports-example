@@ -1,4 +1,4 @@
-package be.nbb.jasper.servlet;
+package be.example.jasper.servlet;
 
 import java.io.IOException;
 import java.io.InputStream;

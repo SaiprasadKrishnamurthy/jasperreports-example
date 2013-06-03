@@ -1,4 +1,4 @@
-package be.nbb.jasper;
+package be.example.jasper;
 
 import java.io.OutputStream;
 import java.util.Map;
