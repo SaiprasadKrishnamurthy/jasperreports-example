@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
-import be.nbb.jasper.ReportGenerator;
+import be.example.jasper.ReportGenerator;
 
 /**
  * This is a simple servlet that creates a pdf report using JasperReports and offers it as a download by writing it to the
