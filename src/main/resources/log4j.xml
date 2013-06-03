@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss } %t %-5p %c : %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="be.nbb">
+		<level value="debug" />
+	</logger>
+	
+	<logger name="org.hibernate.SQL">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.hibernate">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.apache.commons">
+		<level value="warn" />
+	</logger>
+	
+	<logger name="be.nbb.aag.utils.security">
+		<level value="error" />
+	</logger>
+	
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="ConsoleAppender" />
+	</root>
+
+</log4j:configuration>
