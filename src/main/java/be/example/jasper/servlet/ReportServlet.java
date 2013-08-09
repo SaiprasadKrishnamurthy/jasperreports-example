@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -54,7 +53,7 @@ public class ReportServlet extends HttpServlet {
             response.getOutputStream().close();
         } catch (JRException e) {
             LOGGER.error("error while generating the report", e);
-            response.sendError(404, "unable to generate report");
+            response.sendError(500, "unable to generate report");
         }
     }
 
