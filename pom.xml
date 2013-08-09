@@ -29,7 +29,7 @@
 				</artifactId>
 				<version>1.0-beta-2</version>
 				<configuration>
-					<sourceDirectory>src/main/resources/reports/uncompiled</sourceDirectory>
+					<sourceDirectory>src/main/resources/reports</sourceDirectory>
 					<outputDirectory>target/generated-resources/jasper</outputDirectory>
 				</configuration>
 				<executions>
