@@ -31,7 +31,7 @@ public class ReportGeneratorTest {
     private List<Address> addressList;
     private List<Person> personList;
     private Map<String, Object> params;
-    private Locale locale = new Locale("nl");
+    private Locale locale = new Locale("BE","nl");
 
     @Before
     public void setUp() {
@@ -60,5 +60,6 @@ public class ReportGeneratorTest {
         params.put(JRParameter.REPORT_DATA_SOURCE, new JRBeanCollectionDataSource(personList));
         reportGenerator.exportReport(params, personReport, new FileOutputStream(reportFile));
     }
+    
 
 }

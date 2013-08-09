@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JRParameter;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.query.JRXPathQueryExecuterFactory;
 import net.sf.jasperreports.engine.util.JRXmlUtils;
@@ -41,6 +43,7 @@ public class ReportServlet extends HttpServlet {
         Map<String, Object> params;
         params = new HashMap<String, Object>();
         params.put(ReportGenerator.SUBREPORT_DIR_PARAM, ReportGenerator.SUBREPORT_DIR);
+        params.put(JRParameter.REPORT_LOCALE, request.getLocale());
         try {
             InputStream xmlData = getClass().getResourceAsStream("/data/northwind.xml");
             Document document = JRXmlUtils.parse(xmlData);
