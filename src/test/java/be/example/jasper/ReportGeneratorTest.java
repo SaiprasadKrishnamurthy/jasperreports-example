@@ -26,12 +26,11 @@ import be.example.jasper.domain.Person;
 
 public class ReportGeneratorTest {
 
-    private static final String SUBREPORT_DIR_FOR_TEST = "src/main/generated-resources/jasper/";
     private ReportGenerator reportGenerator = new ReportGenerator();
     private List<Address> addressList;
     private List<Person> personList;
     private Map<String, Object> params;
-    private Locale locale = new Locale("BE","nl");
+    private Locale locale = new Locale("BE", "nl");
 
     @Before
     public void setUp() {
@@ -40,7 +39,7 @@ public class ReportGeneratorTest {
         params = new HashMap<String, Object>();
         params.put(JRParameter.REPORT_LOCALE, locale);
         params.put(JRParameter.REPORT_RESOURCE_BUNDLE, ResourceBundle.getBundle("i18n.jasper.labels", locale));
-        params.put(ReportGenerator.SUBREPORT_DIR_PARAM, SUBREPORT_DIR_FOR_TEST);
+        params.put(ReportGenerator.SUBREPORT_DIR_PARAM, ReportGenerator.SUBREPORT_DIR);
     }
 
     @Test
@@ -60,6 +59,5 @@ public class ReportGeneratorTest {
         params.put(JRParameter.REPORT_DATA_SOURCE, new JRBeanCollectionDataSource(personList));
         reportGenerator.exportReport(params, personReport, new FileOutputStream(reportFile));
     }
-    
 
 }

@@ -16,7 +16,7 @@
 		<finalName>jasperreports-example</finalName>
 		<resources>
 			<resource>
-				<directory>src/main/generated-resources</directory>
+				<directory>target/generated-resources</directory>
 			</resource>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -30,7 +30,7 @@
 				<version>1.0-beta-2</version>
 				<configuration>
 					<sourceDirectory>src/main/resources/reports/uncompiled</sourceDirectory>
-					<outputDirectory>src/main/generated-resources/jasper</outputDirectory>
+					<outputDirectory>target/generated-resources/jasper</outputDirectory>
 				</configuration>
 				<executions>
 					<execution>
