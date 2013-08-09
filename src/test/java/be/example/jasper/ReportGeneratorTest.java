@@ -40,7 +40,6 @@ public class ReportGeneratorTest {
         params = new HashMap<String, Object>();
         params.put(JRParameter.REPORT_LOCALE, locale);
         params.put(JRParameter.REPORT_RESOURCE_BUNDLE, ResourceBundle.getBundle(REPORT_RESOURCE_BUNDLE, locale));
-        params.put(JRParameter.REPORT_RESOURCE_BUNDLE, ResourceBundle.getBundle("i18n.jasper.labels", locale));
         params.put(ReportGenerator.SUBREPORT_DIR_PARAM, ReportGenerator.SUBREPORT_DIR);
     }
 
