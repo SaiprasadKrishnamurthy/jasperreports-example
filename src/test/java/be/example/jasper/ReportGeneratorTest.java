@@ -1,5 +1,8 @@
 package be.example.jasper;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -51,6 +54,7 @@ public class ReportGeneratorTest {
         JasperReport jasperReport = ReportGenerator.getCompiledReport("jasper/CustomersReport.jasper");
         File reportFile = File.createTempFile("report_", ".pdf");
         reportGenerator.exportReport(params, jasperReport, new FileOutputStream(reportFile));
+        assertThat(reportFile.exists(), is(true));
     }
 
     @Test
@@ -59,6 +63,7 @@ public class ReportGeneratorTest {
         File reportFile = File.createTempFile("report_", ".pdf");
         params.put(JRParameter.REPORT_DATA_SOURCE, new JRBeanCollectionDataSource(personList));
         reportGenerator.exportReport(params, personReport, new FileOutputStream(reportFile));
+        assertThat(reportFile.exists(), is(true));
     }
 
 }
