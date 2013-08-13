@@ -5,7 +5,11 @@ import java.util.List;
 
 import be.example.jasper.domain.Address;
 import be.example.jasper.domain.Person;
-
+/**
+ * Test class to provide data for preview in iReport
+ * @author JOAPER
+ *
+ */
 public class PersonDataSourceFactory {
 
     public PersonDataSourceFactory() {
@@ -20,22 +24,40 @@ public class PersonDataSourceFactory {
         return createPersons(createAddresses());
     }
 
-    public static List<Person> createPersons(final List<Address> addresses) {
+    public static List<Person> createPersons(
+            final List<Address> addresses) {
         List<Person> personList = new ArrayList<Person>();
-        personList.add(new Person("Peter", "Janssens", addresses.subList(0, 5)));
-        personList.add(new Person("Jan", "Peeters", addresses.subList(0, 1)));
-        personList.add(new Person("Tom", "Janssens", addresses.subList(2, 4)));
-        personList.add(new Person("Piet", "Pieters", addresses.subList(4, 5)));
+        personList.add(new Person("Peter", "Janssens",
+                addresses.subList(0, 5)));
+        personList.add(new Person("Jan", "Peeters",
+                addresses.subList(0, 1)));
+        personList.add(new Person("Tom", "Janssens",
+                addresses.subList(2, 4)));
+        personList.add(new Person("Piet", "Pieters",
+                addresses.subList(4, 5)));
         return personList;
     }
 
     public static List<Address> createAddresses() {
         List<Address> addresses = new ArrayList<Address>();
-        addresses.add(new Address.Builder().setStreet("Berlaimontlaan 14").setCity("Brussel").setZipCode("1000").build());
-        addresses.add(new Address.Builder().setStreet("Koekoekstraat 70").setCity("Melle").setZipCode("9111").build());
-        addresses.add(new Address.Builder().setStreet("Wetstraat 1").setCity("Brussel").setZipCode("1000").build());
-        addresses.add(new Address.Builder().setStreet("Veldstraat 2").setCity("Gent").setZipCode("9000").build());
-        addresses.add(new Address.Builder().setStreet("Meir 5").setCity("Antwerpen").setZipCode("2000").build());
+        addresses.add(new Address.Builder()
+                .setStreet("Berlaimontlaan 14")
+                .setCity("Brussel").setZipCode("1000")
+                .build());
+        addresses.add(new Address.Builder()
+                .setStreet("Koekoekstraat 70")
+                .setCity("Melle").setZipCode("9111")
+                .build());
+        addresses.add(new Address.Builder()
+                .setStreet("Wetstraat 1")
+                .setCity("Brussel").setZipCode("1000")
+                .build());
+        addresses.add(new Address.Builder()
+                .setStreet("Veldstraat 2").setCity("Gent")
+                .setZipCode("9000").build());
+        addresses.add(new Address.Builder()
+                .setStreet("Meir 5").setCity("Antwerpen")
+                .setZipCode("2000").build());
         return addresses;
     }
 
