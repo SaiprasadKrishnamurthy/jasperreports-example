@@ -9,28 +9,8 @@
 		</layout>
 	</appender>
 
-	<logger name="be.nbb">
+	<logger name="be.example.jasper">
 		<level value="debug" />
-	</logger>
-	
-	<logger name="org.hibernate.SQL">
-		<level value="info" />
-	</logger>
-	
-	<logger name="org.hibernate">
-		<level value="info" />
-	</logger>
-
-	<logger name="org.springframework">
-		<level value="info" />
-	</logger>
-	
-	<logger name="org.apache.commons">
-		<level value="warn" />
-	</logger>
-	
-	<logger name="be.nbb.aag.utils.security">
-		<level value="error" />
 	</logger>
 	
 	<root>
